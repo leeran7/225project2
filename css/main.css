@@ -1,0 +1,40 @@
+html{
+    height: 100%;
+    width: 100vw;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Zilla Slab', serif;
+}
+.nav-link {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: x-large;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.display-1 {
+    font-size: 3em;
+    font-weight: 700;
+}
+.hero {
+    height: 70vh;
+    width: 100vw;
+    background-image: url(/225project/background.jpg);
+    background-size: cover;
+}
+.card {
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.products .card-img-overlay{
+    transition: .2s ease-in-out;
+    opacity: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+    color:white;
+}
+.productLink:hover .card-img-overlay{
+    opacity: .8;
+}
