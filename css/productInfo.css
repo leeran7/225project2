@@ -1,0 +1,21 @@
+.productInfo{
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+.productInfo img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    margin: 20px auto;
+  }
+  @media only screen and (max-width: 480px){
+    .productInfo{
+        flex-direction: column;
+    }
+    .productInfo img {
+        max-width: 80%;
+        margin: 20px auto;
+      }
+}

@@ -4,12 +4,12 @@ html{
 }
 * {
     box-sizing: border-box;
-    font-family: 'Zilla Slab', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 .nav-link {
     font-family: 'Lobster', cursive;
     color: white;
-    font-size: x-large;
+    font-size: xx-large;
     margin-left: 4px;
     margin-right: 4px;
 }
@@ -20,7 +20,7 @@ html{
 .hero {
     height: 70vh;
     width: 100vw;
-    background-image: url(/225project/background.jpg);
+    background-image: url(/225project/photos/background.jpg);
     background-size: cover;
 }
 .card {
@@ -28,13 +28,40 @@ html{
     padding: 0;
     margin-top: 20px;
 }
-.products .card-img-overlay{
+.product-link .card-img-overlay{
     transition: .2s ease-in-out;
     opacity: 0;
     text-align: center;
     background-color: rgba(0,0,0,.5);
     color:white;
+    font-weight: 700;
 }
-.productLink:hover .card-img-overlay{
+.product-link:hover .card-img-overlay{
     opacity: .8;
+}
+@media only screen and (max-width: 480px){
+    .products {
+        flex-wrap: wrap;
+    }
+    .product-link .card-img-overlay {
+        opacity: 1;
+        position: relative;
+        background-color: rgba(0,0,0,.85);
+    }
+    .product-link .card-img-overlay, h5, p {
+        font-size: smaller;
+        color: #f3f3f3;
+        font-weight: 600;
+    }
+    .display-1{
+        font-size: 2em;
+    }
+    .blockquote {
+        font-size: .8em;
+    }
+    .nav-link {
+        font-size: x-large;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
