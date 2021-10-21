@@ -39,6 +39,22 @@ html{
 .product-link:hover .card-img-overlay{
     opacity: .8;
 }
+.cart-items{
+    min-height: 100vh;
+}
+.cart-items .card-img {
+    height: 300px;
+    width: 300px;
+}
+.cart-items .row {
+    flex-wrap: nowrap; 
+}
+.cart-items p,h5 {
+    color:#f3f3f3;
+}
+.cart-items.card-body {
+    width: 10%;
+}
 @media only screen and (max-width: 480px){
     .products {
         flex-wrap: wrap;
@@ -63,5 +79,8 @@ html{
         font-size: x-large;
         margin-left: 10px;
         margin-right: 10px;
+    }
+    .cart-items .row {
+        flex-wrap: wrap; 
     }
 }

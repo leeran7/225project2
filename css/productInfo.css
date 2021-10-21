@@ -1,9 +1,9 @@
-.productInfo{
+.product-info{
     height: 100vh;
     margin: 0;
     text-align: center;
 }
-.productInfo img {
+.product-info img {
     display: block;
     width: auto;
     height: auto;
@@ -11,10 +11,10 @@
     margin: 20px auto;
   }
   @media only screen and (max-width: 480px){
-    .productInfo{
+    .product-info{
         flex-direction: column;
     }
-    .productInfo img {
+    .product-info img {
         max-width: 80%;
         margin: 20px auto;
       }
