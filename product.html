@@ -33,8 +33,9 @@
               <img src="photos/item9.jpg" id="image" class="card-img" alt="item for sale">
               <div class="container">
                 <h1 id="title" class="card-title text-white"></h1>
-                <p id="description" class="card-text"></p>
-                <a href="cart.html" class="cart-link pb-3">Add to Card</a>
+                <p id="description" class="card-text text-white"></p>
+                <p id="item-price" class="text-white"></p>
+                <a href="cart.html" class="cart-link btn btn-primary">Add to Card</a>
               </div>
             </form>
         </section>
@@ -50,6 +51,8 @@
       document.getElementById("title").innerText = title.replace(/-/g, " ");
       const desc = urlParams.get("desc");
       document.getElementById("description").innerText = desc.replace(/-/g, " ");
+      const price = urlParams.get("price");
+      document.getElementById("item-price").innerText = price;
     </script>
 
   </body>

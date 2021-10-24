@@ -9,25 +9,54 @@ $(".product-link").click(function(){
     href += "&desc=";
     let desc = $(this).contents().find(".card-text").first().text();
     href += desc.replace(/\s/g, '-');
+    let price = $(this).contents().find("#price").first().text();
+    href += "&price=";
+    href += price;
     $(this).attr("href", href);
 });
+
 $(".cart-link").click(function(){
     let href = $(this).attr("href");
     href += "?pic=";
     const src = $(".product-info").find("#image").attr("src");
     href += src;
+    const title = $(".product-info").contents().find("#title").text();
     href += "&title=";
-    let title = $(".product-info").contents().find("#title").text();
     href += title.replace(/\s/g, '-');
-    let desc = $(".product-info").contents().find(".card-text").first().text();
-    let item = `<div class="d-flex col-lg-4 no-gutters justify-content-center"><img src="${src}" class="card-img" alt="...">
-            <img src="${src}" class="card-img" alt="...">
-            <div class="card-body d-flex flex-column justify-content-around align-items-center text-center">
-                <h5 class="card-title">${title}</h5>
-                <p class="card-text">${desc}</p>
-                <a href="cart.html" >Delete</a>
-            </div>
-        </div>`;
-    $(item).appendTo(".cart-items form");
+    
+    const price = $(".product-info").contents().find("#item-price").text();
+    // console.log(price);
+    href += "&price=";
+    href += price;
+    addToCart(src, title, price);
     $(this).attr("href", href);
 });
+
+function addToCart(src, title, price){
+    let cart = document.querySelector('#cart');
+    let mainDiv = document.createElement("div");
+    // ["d-flex", "col-lg-4", "no-gutters", "justify-content-center"]
+    let classes = ["card", "col-lg-4", "no-gutters", "justify-content-center", "align-items-center", "bg-dark"];
+    mainDiv.classList.add(...classes);
+    let img = document.createElement("img");
+    img.src = src;
+    
+    img.className = "card-img";
+    img.alt = "cart-item";
+    mainDiv.appendChild(img);
+
+    let innerDiv = document.createElement("div");
+    classes = ["d-flex", "card-body", "justify-content-around", "align-items-center", "flex-column", "bg-dark"];
+    innerDiv.classList.add(...classes);
+    let h5 = document.createElement("h5");
+    h5.className = "card-title";
+    h5.textContent = title;
+    innerDiv.appendChild(h5);
+    let p = document.createElement("p");
+    p.className = "card-text";
+    p.textContent = price;
+    innerDiv.appendChild(p);
+    mainDiv.appendChild(innerDiv);
+
+    cart.append(mainDiv);
+}

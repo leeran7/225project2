@@ -36,8 +36,15 @@ html{
     color:white;
     font-weight: 700;
 }
+.product-link, .card-img-overlay{
+    transition: transform .2s ease-in-out;
+}
 .product-link:hover .card-img-overlay{
     opacity: .8;
+    transform: scale(1.03);
+}
+.product-link:hover .card-img{
+    transform: scale(1.03);
 }
 .cart-items{
     min-height: 100vh;
