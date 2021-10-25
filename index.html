@@ -12,14 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <title>Artsy</title>
+    <title>TechySpace</title>
   </head>
   <body>
-    <main>
+    <main class="bg-dark">
         <nav class="navigation fixed-bottom">
             <ul class="nav nav-tabs bg-dark d-flex justify-content-center mx-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" href="index.html" >Home</a>
+                  <a class="nav-link active" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html" >About</a>
@@ -42,6 +42,9 @@
               </div>
               
         </section>
+        <div class="order-status alert alert-success text-center mt-5 container">
+            <h2>Order was placed successfully! Thank you!</h2>
+        </div>
         <section>
             <form action="product.html" method="GET" class="products d-flex flex-wrap justify-content-center align-content-around pt-3 bg-dark">
                 <div class="d-flex flex-column col-lg-4 col-md-6">
@@ -51,7 +54,7 @@
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Macbook pro</h5>
                                     <p class="card-text">The new MacBook Pro 14" and MacBook Pro 16". Order now. Incredible performance with the M1 Pro or M1 Max chip. Accessibility features. Retina display. Backlit Magic Keyboard. Apple M1 Chip. </p>
-                                    <p class="card-text" id="price">$999</p>
+                                    <p class="card-text price">$999</p>
                                     <p class="card-text">Last updated 5 mins ago</p>
                             </div>
                         </a>
@@ -62,6 +65,7 @@
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Soundcore</h5>
                                     <p class="card-text">ASTONISHING SOUND: Breathtaking stereo sound with deep bass is delivered with exceptional clarity and zero distortion by two high-sensitivity drivers and a patented bass port.</p>
+                                    <p class="card-text price">$179</p>
                                     <p class="card-text">Last updated 20 mins ago</p>
                             </div>
                         </a>
@@ -70,8 +74,9 @@
                         <a href="product.html" class="product-link">
                                 <img src="photos/item5.jpg" class="card-img" alt="macbook pro">
                                 <div class="card-img-overlay">
-                                    <h5 class="card-title">Card title</h5>
+                                    <h5 class="card-title">Apple Watch</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 3 mins ago</p>
                             </div>
                         </a>
@@ -80,8 +85,44 @@
                         <a href="product.html" class="product-link">
                                 <img src="photos/item9.jpg" class="card-img" alt="macbook pro">
                                 <div class="card-img-overlay">
-                                    <h5 class="card-title">Card title</h5>
+                                    <h5 class="card-title">Apple set</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$3999</p>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="product.html" class="product-link">
+                                <img src="photos/item3.jpg" class="card-img" alt="macbook pro">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Headphones</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$999</p>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6">
+                    <div class="card">
+                        <a href="product.html" class="product-link">
+                                <img src="photos/item6.jpg" class="card-img" alt="macbook pro">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$399</p>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="product.html" class="product-link">
+                                <img src="photos/item4.jpg" class="card-img" alt="macbook pro">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Camera</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 3 mins ago</p>
                             </div>
                         </a>
@@ -92,28 +133,7 @@
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
-                                    <p class="card-text">Last updated 3 mins ago</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="d-flex flex-column col-lg-4 col-md-6">
-                    <div class="card">
-                        <a href="product.html" class="product-link">
-                                <img src="photos/item8.jpg" class="card-img" alt="macbook pro">
-                                <div class="card-img-overlay">
-                                    <h5 class="card-title">Camera</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
-                                    <p class="card-text">Last updated 3 mins ago</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="product.html" class="product-link">
-                                <img src="photos/item6.jpg" class="card-img" alt="macbook pro">
-                                <div class="card-img-overlay">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 3 mins ago</p>
                             </div>
                         </a>
@@ -124,6 +144,7 @@
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 3 mins ago</p>
                             </div>
                         </a>
@@ -134,19 +155,21 @@
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 3 mins ago</p>
                             </div>
                         </a>
                     </div>
                 </div>
                 
-                <div class="d-flex flex-column col-lg-4 col-md-12">
+                <div class="d-flex flex-column col-lg-4 col-md-12 pb-5">
                     <div class="card">
                         <a href="product.html" class="product-link">
                                 <img src="photos/item5.jpg" class="card-img" alt="macbook pro">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 3 mins ago</p>
                             </div>
                         </a>
@@ -157,6 +180,7 @@
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 3 mins ago</p>
                             </div>
                         </a>
@@ -167,6 +191,7 @@
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi excepturi, ut unde accusantium voluptatem cumque amet aut nesciunt qui asperiores magni beatae recusandae repudiandae laboriosam dignissimos accusamus veritatis fugiat corrupti.</p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 3 mins ago</p>
                             </div>
                         </a>
@@ -177,16 +202,18 @@
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Macbook pro</h5>
                                     <p class="card-text">The new MacBook Pro 14" and MacBook Pro 16". Order now. Incredible performance with the M1 Pro or M1 Max chip. Accessibility features. Retina display. Backlit Magic Keyboard. Apple M1 Chip. </p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 5 mins ago</p>
                             </div>
                         </a>
                     </div>
-                    <div class="card">
+                    <div class="card mb-5">
                         <a href="product.html" class="product-link">
                                 <img src="photos/item1.jpg" class="card-img" alt="macbook pro">
                                 <div class="card-img-overlay">
                                     <h5 class="card-title">Soundcore</h5>
                                     <p class="card-text">ASTONISHING SOUND: Breathtaking stereo sound with deep bass is delivered with exceptional clarity and zero distortion by two high-sensitivity drivers and a patented bass port.</p>
+                                    <p class="card-text price">$399</p>
                                     <p class="card-text">Last updated 20 mins ago</p>
                             </div>
                         </a>

@@ -10,7 +10,7 @@
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <title>Hello, world!</title>
+    <title>Cart</title>
   </head>
   <body>
     <main>
@@ -27,23 +27,74 @@
             </li>
           </ul>
         </nav>
-        <section class="cart-items bg-dark">
-          <form action="checkout.html" method="GET" id="cart" class="d-flex flex-wrap justify-content-center align-content-end pt-3 bg-dark">
-            <div class="card mb-3 bg-dark" >
-              <div class="row no-gutters justify-content-center">
-                <div class="col-md-2 d-flex justify-content-center">
-                  <img src="photos/item2.jpg" class="card-img" alt="cart-item">
+        <section class="cart-items bg-dark pb-5">
+          <h1 class="display-1 text-center  text-white pt-5 pr-5">Cart</h1>
+          <form action="checkout.html" method="GET" class="d-flex flex-wrap container justify-content-center align-content-end pt-3 bg-dark">
+            <div class="col-lg-10 py-4">
+              <div id="cart">
+                <div class="card mb-3 bg-dark pb-4 border-bottom">
+                  <div class="row no-gutter justify-content-center">
+                    <div class="col-md-2 d-flex justify-content-center">
+                      <img src="photos/item.jpg" class="card-img" alt="cart-item">
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center text-center">
+                      <div class="card-body">
+                        <h5 class="card-title">Macbook</h5>
+                        <p class="card-text item-price">$1999</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-8 d-flex align-items-center">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="card mb-3 bg-dark pb-4 border-bottom">
+                  <div class="row no-gutter justify-content-center">
+                    <div class="col-md-2 d-flex justify-content-center">
+                      <img src="photos/item8.jpg" class="card-img" alt="cart-item">
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center text-center">
+                      <div class="card-body">
+                        <h5 class="card-title">Camera</h5>
+                        <p class="card-text item-price">$2199</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3 bg-dark pb-4 border-bottom">
+                  <div class="row no-gutter justify-content-center">
+                    <div class="col-md-2 d-flex justify-content-center">
+                      <img src="photos/item5.jpg" class="card-img" alt="cart-item">
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center text-center">
+                      <div class="card-body">
+                        <h5 class="card-title">Apple Watch</h5>
+                        <p class="card-text item-price">$399</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3 bg-dark pb-4 border-bottom">
+                  <div class="row no-gutter justify-content-center">
+                    <div class="col-md-2 d-flex justify-content-center">
+                      <img src="photos/item6.jpg" class="card-img" alt="cart-item">
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center text-center">
+                      <div class="card-body">
+                        <h5 class="card-title">Iphone</h5>
+                        <p class="card-text item-price">$999</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+            <div class="col-lg-2 d-flex p-4 align-items-between justify-content-center text-center">
+              <div class="purchase">
+                <div class="d-flex justify-content-center">
+                  <h2 class="text-white">$</h2>
+                  <h2 id="total" class="pl-1 text-white">5596</h2>
+                </div>
+                <a type="submit" href="checkout.html" class="btn btn-success" id="checkout-btn">Checkout (<span id="qty">4</span>)</a>
+              </div>
+            </div>
           </form>
         </section>
     </main>
@@ -51,6 +102,18 @@
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const src = urlParams.get('pic');
+        const title = urlParams.get("title");
+        const price = urlParams.get("price");
+        if(src && title && price){
+          addToCart(src,title, price);
+        }
+        
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

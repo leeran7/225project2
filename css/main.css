@@ -6,22 +6,50 @@ html{
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+section{
+    min-height: 70vh;
+}
+.checkout {
+    height: 100vh;
+}
+.checkout label{
+    color: white;
+}
+.checkout label, input {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.checkout input{
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+}
 .nav-link {
     font-family: 'Lobster', cursive;
     color: white;
     font-size: xx-large;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.nav-link:hover{
+    background-color: #f3f3f3;
+    color: #343a40;
 }
 .display-1 {
     font-size: 3em;
     font-weight: 700;
 }
 .hero {
-    height: 70vh;
+    height: 100%;
     width: 100vw;
     background-image: url(/225project/photos/background.jpg);
     background-size: cover;
+}
+#image {
+    max-width: 30%;
+}
+#qty{
+    width: 40px;
 }
 .card {
     border: none;
@@ -49,10 +77,6 @@ html{
 .cart-items{
     min-height: 100vh;
 }
-/* .cart-items .card-img {
-    height: 300px;
-    width: 300px;
-} */
 .cart-items .row {
     flex-wrap: nowrap; 
 }
@@ -61,6 +85,24 @@ html{
 }
 .cart-items.card-body {
     width: 10%;
+}
+.order-status {
+    /* display: none !important; */
+}
+@media only screen and (max-width: 1300px){
+    .card-img-overlay{
+        font-size: .8em;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .card-img-overlay{
+        font-size: .7em;
+    }
+}
+@media only screen and (max-width: 768px){
+    .card-img-overlay{
+        font-size: 1em;
+    }
 }
 @media only screen and (max-width: 480px){
     .products {
@@ -71,7 +113,7 @@ html{
         position: relative;
         background-color: rgba(0,0,0,.85);
     }
-    .product-link .card-img-overlay, h5, p {
+    .product-link .card-img-overlay + h5 + p {
         font-size: smaller;
         color: #f3f3f3;
         font-weight: 600;
@@ -89,5 +131,8 @@ html{
     }
     .cart-items .row {
         flex-wrap: wrap; 
+    }
+    .checkout {
+        height: 200vh;
     }
 }
