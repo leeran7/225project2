@@ -49,10 +49,10 @@ html{
 .cart-items{
     min-height: 100vh;
 }
-.cart-items .card-img {
+/* .cart-items .card-img {
     height: 300px;
     width: 300px;
-}
+} */
 .cart-items .row {
     flex-wrap: nowrap; 
 }
