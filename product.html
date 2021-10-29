@@ -4,34 +4,33 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link href="./css/bootstrap.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/productInfo.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <title>Hello, world!</title>
+    <title>Product</title>
   </head>
   <body>
     <main>
       <nav class="navigation fixed-bottom">
         <ul class="nav nav-tabs bg-dark d-flex justify-content-center mx-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html" >Home</a>
+              <a class="nav-link " href="index.html"><i class="fas fa-home"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html" >About</a>
+              <a class="nav-link px-4" href="about.html" ><i class="fas fa-info"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cart.html">Cart</a>
+              <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
             </li>
           </ul>
     </nav>
         <section>
-            <form action="cart.html" method="GET"  class="product-info bg-dark">
-              <div class="row">
-                <img src="photos/item.jpg" id="image" class="card-img" alt="item for sale">
+            <form action="cart.html" method="GET"  class="product-info d-flex justify-content-center pb-4 flex-column bg-dark">
+              <div>
+                <img src="photos/item.jpg" id="image" class="card-img pb-2" alt="item for sale">
               </div>
               <div class="container">
                 <h1 id="title" class="card-title text-white"></h1>

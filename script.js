@@ -45,7 +45,7 @@ function addToCart(src, title, price){
     innerDiv.classList.add(...classes);
 
     let imgDiv = document.createElement("div");
-    classes = ["col-md-2", "d-flex", "justify-content-center"];
+    classes = ["col-md-4", "d-flex", "justify-content-center"];
     imgDiv.classList.add(...classes);
 
     let img = document.createElement("img");

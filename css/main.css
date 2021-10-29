@@ -1,13 +1,17 @@
-html{
-    height: 100%;
-    width: 100vw;
-}
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-tabs {
+    border-bottom: 0;
+    border-top: 1px solid #f3f3f3;
+}
 section{
-    min-height: 70vh;
+    min-height: 100vh;
 }
 .checkout {
     height: 100vh;
@@ -18,11 +22,15 @@ section{
 .checkout label, input {
     margin-bottom: 10px;
     font-size: 20px;
+    flex-grow: 1;
 }
 .checkout input{
     font-weight: 500;
     padding: 10px;
     text-align: center;
+}
+.order-details .h2{
+    display: inline;
 }
 .nav-link {
     font-family: 'Lobster', cursive;
@@ -38,34 +46,47 @@ section{
 .display-1 {
     font-size: 3em;
     font-weight: 700;
+    color: #f3f3f3;
 }
 .hero {
     height: 100%;
     width: 100vw;
-    background-image: url(/225project/photos/background.jpg);
     background-size: cover;
 }
-#image {
-    max-width: 30%;
+#home .hero{
+    height: 70vh;
+    background-image: url(/225project/photos/background.jpg);
 }
+#about .hero {
+    height: 100vh;
+    background-image: url(/225project/photos/passion.jpg);
+    color: #e3e3e3;
+    font-weight: 600;
+}
+#about .content {
+    background-color: rgba(0,0,0,.5);
+    border-radius: 25px;
+}
+
 #qty{
     width: 40px;
 }
 .card {
     border: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 10px;
+
 }
 .product-link .card-img-overlay{
-    transition: .2s ease-in-out;
+    transition: all .2s ease-in-out;
     opacity: 0;
     text-align: center;
     background-color: rgba(0,0,0,.5);
     color:white;
-    font-weight: 700;
+    font-weight: 600;
 }
-.product-link, .card-img-overlay{
-    transition: transform .2s ease-in-out;
+.product-link .card-img-overlay, .card-img{
+    transition: all .2s ease-in-out;
 }
 .product-link:hover .card-img-overlay{
     opacity: .8;
@@ -80,39 +101,77 @@ section{
 .cart-items .row {
     flex-wrap: nowrap; 
 }
-.cart-items p,h5 {
+.cart-items p, .card-title {
     color:#f3f3f3;
 }
 .cart-items.card-body {
     width: 10%;
 }
 .order-status {
-    /* display: none !important; */
+    display: none !important;
 }
+.product-info{
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+.product-info #image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 30%;
+    margin: 0 auto;
+  }
 @media only screen and (max-width: 1300px){
     .card-img-overlay{
         font-size: .8em;
     }
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1024px){
     .card-img-overlay{
         font-size: .7em;
     }
-}
-@media only screen and (max-width: 768px){
-    .card-img-overlay{
-        font-size: 1em;
+    .checkout {
+        height: 100vh;
     }
-}
-@media only screen and (max-width: 480px){
-    .products {
-        flex-wrap: wrap;
+    .product-info #image{
+        max-width: 70%;
+    }
+    .cart-items .card-title,.card-body{
+        font-size: 1.5em;
     }
     .product-link .card-img-overlay {
         opacity: 1;
         position: relative;
         background-color: rgba(0,0,0,.85);
     }
+    #about .hero {
+        background-position: -200px 0;
+    }
+}
+@media only screen and (max-width: 992px){
+    .checkout {
+        height: 180vh;
+    }
+}
+@media only screen and (max-width: 768px){
+    .card-img-overlay{
+        font-size: 1em;
+    }
+    .cart-items .card-title,.card-body{
+        font-size: 1em;
+    }
+    #about .hero {
+        height: 250vh;
+        background-position: -300px 0;
+    }
+    
+}
+@media only screen and (max-width: 480px){
+    .products {
+        flex-wrap: wrap;
+    }
+    
     .product-link .card-img-overlay + h5 + p {
         font-size: smaller;
         color: #f3f3f3;
@@ -126,13 +185,24 @@ section{
     }
     .nav-link {
         font-size: x-large;
-        margin-left: 10px;
-        margin-right: 10px;
+        /* margin-left: 10px;
+        margin-right: 10px; */
+    }
+    .nav-item{
+        margin: 0;
     }
     .cart-items .row {
         flex-wrap: wrap; 
     }
-    .checkout {
-        height: 200vh;
+    .product-info{
+        flex-direction: column;
     }
+    .product-info #image {
+        max-width: 80%;
+        margin: 20px auto;
+      }
+      .checkout {
+        height: 180vh;
+    }
+    
 }
