@@ -21,7 +21,7 @@ $(".cart-link").click(function(){
     const title = urlParams.get("title");
     const price = urlParams.get("price");
     let href = $(this).attr("href");
-    href += `?pic=${image}&title=${title}&price=${price.replace("$"," ")}`;
+    href += `?pic=${image}&title=${title}&price=${price.replace("$","")}`;
     $(this).attr("href", href);
 });
 
@@ -32,12 +32,24 @@ $("#checkout-btn").click(function(){
     href += `?total=${total}`
     href += `&qty=${qty}`;
     $(this).attr("href", href);
+});
+
+$("#order-submit").click(function(e){
+    let valid = $("#checkout-order").valid();
+    if(!valid){
+        e.preventDefault();
+    } else {
+        $(".hide").addClass("d-none");
+        $(".confirmation").removeClass("d-none");
+        $(".checkout").height("100")
+        e.preventDefault();
+    }
 })
 
 function addToCart(src, title, price){
     let cart = document.querySelector('#cart');
     let mainDiv = document.createElement("div");
-    let classes = ["card", "mb-3", "bg-dark", "pb-4", "border-bottom"];
+    let classes = ["card", "m-3", "bg-dark", "p-4", "border-bottom", "border-top"];
     mainDiv.classList.add(...classes);
 
     let innerDiv = document.createElement("div");

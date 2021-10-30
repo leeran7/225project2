@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
     <title>Checkout</title>
   </head>
   <body>
@@ -19,31 +20,31 @@
       <section class="checkout d-flex flex-column justify-content-around bg-dark">
        <div class="container">
         <h1 class="text-center display-1 pt-md-5 pt-sm-0 text-white">Checkout</h1>
-        <form action="index.html" method="GET" class="d-flex justify-content-around flex-wrap">
+        <form action="index.html" method="GET" id="checkout-order" class="d-flex justify-content-around flex-wrap">
 
-          <div class="col-lg-6 col-12 d-flex flex-column">
-            <label for="first-name">First Name*: </label>
+          <div class="col-lg-6 col-12 d-flex flex-column hide">
+            <label for="first-name">First Name *: </label>
             <input placeholder="First Name *" required id="first-name" type="text" name="first-name">
-            <label for="first-name">Last Name*: </label>
+            <label for="first-name">Last Name *: </label>
             <input placeholder="Last Name *" required id="last-name" type="text" name="last-name">
-            <label for="email">Email*: </label>
+            <label for="email">Email *: </label>
             <input placeholder="John@Doe.com *" required id="email" type="email" name="email">
-            <label for="street-num">Street Number: </label>
-            <input placeholder="Street Number *" id="street-num" type="number" name="street-num">
-            <label for="street-name">Street Name: </label>
+            <label for="street-num">Street Number *: </label>
+            <input placeholder="Street Number *" required id="street-num" type="number" name="street-num">
+            <label for="street-name">Street Name *: </label>
             <input placeholder="Street Name *" required id="street-name" type="text" name="street-name">
-            <label for="city">City*: </label>
+            <label for="city">City *: </label>
             <input placeholder="City *" required id="city" type="text" name="city">
           </div>
-
+          
           <div class="col-lg-5 col-12 d-flex justify-content-between flex-column mx-1">
-            <div class="d-flex flex-column mb-5">
-              <label for="state">State: </label>
-              <input placeholder="State *" id="state" type="text" name="state">
-              <label for="zip">Zip: </label>
+            <div class="d-flex flex-column mb-5 hide">
+              <label for="state">State *: </label>
+              <input placeholder="State *" required id="state" type="text" name="state">
+              <label for="zip">Zip *: </label>
               <input placeholder="Zip Code *" required id="zip" type="text" name="zip">
-              <label for="phone">Phone Number: </label>
-              <input placeholder="Phone Number" id="phone" type="tel" name="phone">
+              <label for="phone">Phone Number *: </label>
+              <input placeholder="Phone Number *" required id="phone" type="tel" name="phone">
             </div>
 
             <div class="order-details text-center flex-grow-1 bg-light p-4">
@@ -60,7 +61,8 @@
                 <p class="h2 ml-1" id="total"></p>
               </div>
             </div>
-            <button type="submit" class="d-flex justify-content-center btn btn-info mb-2" id="order-submit">Submit</button>
+            <button type="submit" class="d-flex justify-content-center btn btn-info mb-2 hide" id="order-submit">Submit</button>
+            <button type="submit" class="d-flex justify-content-center confirmation d-none btn btn-info mb-2">Confirm Order</button>
           </div>
         </form>
         
@@ -69,6 +71,7 @@
       </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script>

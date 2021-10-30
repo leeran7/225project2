@@ -24,6 +24,10 @@ section{
     font-size: 20px;
     flex-grow: 1;
 }
+.card{
+    /* box-shadow: rgba(243, 243, 243, 0.10) 0px 54px 55px, rgba(243, 243, 243, 0.07) 0px -12px 30px, rgba(243, 243, 243, 0.1) 0px 4px 6px, rgba(243, 243, 243, 0.1) 0px 12px 13px, rgba(243, 243, 243, 0.06) 0px -3px 5px; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
 .checkout input{
     font-weight: 500;
     padding: 10px;
@@ -75,7 +79,11 @@ section{
     border: none;
     padding: 0;
     margin: 10px;
-
+    border-radius: 20px;
+    background-color: #343a40;
+}
+.card-img, .card-img-overlay{
+    border-radius: 20px;
 }
 .product-link .card-img-overlay{
     transition: all .2s ease-in-out;
@@ -144,6 +152,10 @@ section{
         opacity: 1;
         position: relative;
         background-color: rgba(0,0,0,.85);
+    
+    }
+    .card-img-overlay{
+        margin-top: 7px;
     }
     #about .hero {
         background-position: -200px 0;
@@ -202,7 +214,7 @@ section{
         margin: 20px auto;
       }
       .checkout {
-        height: 180vh;
+        height: 200vh;
     }
     
 }
