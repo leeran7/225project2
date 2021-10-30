@@ -132,13 +132,10 @@ section{
   }
 @media only screen and (max-width: 1300px){
     .card-img-overlay{
-        font-size: .8em;
+        font-size: .7em;
     }
 }
 @media only screen and (max-width: 1024px){
-    .card-img-overlay{
-        font-size: .7em;
-    }
     .checkout {
         height: 100vh;
     }

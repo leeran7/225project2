@@ -41,7 +41,7 @@ $("#order-submit").click(function(e){
     } else {
         $(".hide").addClass("d-none");
         $(".confirmation").removeClass("d-none");
-        $(".checkout").height("100")
+        $(".checkout").height("100");
         e.preventDefault();
     }
 })
@@ -49,15 +49,15 @@ $("#order-submit").click(function(e){
 function addToCart(src, title, price){
     let cart = document.querySelector('#cart');
     let mainDiv = document.createElement("div");
-    let classes = ["card", "m-3", "bg-dark", "p-4", "border-bottom", "border-top"];
+    let classes = ["card", "m-3", "bg-dark", "p-lg-4","p-sm-2", "p-1", "border-bottom", "border-top"];
     mainDiv.classList.add(...classes);
 
     let innerDiv = document.createElement("div");
-    classes = ["row", "no-gutter", "justify-content-center"];
+    classes = ["d-flex", "no-gutter", "justify-content-center"];
     innerDiv.classList.add(...classes);
 
     let imgDiv = document.createElement("div");
-    classes = ["col-md-4", "d-flex", "justify-content-center"];
+    classes = ["col-md-5", "d-flex", "justify-content-center"];
     imgDiv.classList.add(...classes);
 
     let img = document.createElement("img");
@@ -69,7 +69,7 @@ function addToCart(src, title, price){
     innerDiv.appendChild(imgDiv);
 
     let col2 = document.createElement("div");
-    classes = ["col-md-8", "d-flex", "align-items-center", "text-center"];
+    classes = ["col-md-7", "d-flex", "align-items-center", "text-center"];
     col2.classList.add(...classes);
 
     let bodyDiv = document.createElement("div");
