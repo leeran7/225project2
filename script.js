@@ -45,6 +45,15 @@ $("#order-submit").click(function(e){
         e.preventDefault();
     }
 })
+$("#confirmation").click(function(e){
+    e.preventDefault();
+    $(".order-details").addClass("d-none");
+    $("#confirmation").addClass("d-none");
+    $("#goback").addClass("d-none");
+    $("#home").removeClass("d-none");
+    $("#checkouth1").text("Checkout Completed!");
+    $("#order-complete").removeClass("d-none");
+})
 
 function addToCart(src, title, price){
     let cart = document.querySelector('#cart');

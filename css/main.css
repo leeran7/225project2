@@ -130,6 +130,9 @@ section{
     max-width: 30%;
     margin: 0 auto;
   }
+  /* .thank-you{
+      background-color: rgba(100,200,50,1);
+  } */
 @media only screen and (max-width: 1300px){
     .card-img-overlay{
         font-size: .7em;
