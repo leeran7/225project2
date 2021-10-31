@@ -59,11 +59,11 @@ section{
 }
 #home .hero{
     height: 70vh;
-    background-image: url(/225project/photos/background.jpg);
+    background-image: url(../photos/background.jpg);
 }
 #about .hero {
     height: 100vh;
-    background-image: url(/225project/photos/passion.jpg);
+    background-image: url(../photos/passion.jpg);
     color: #e3e3e3;
     font-weight: 600;
 }
